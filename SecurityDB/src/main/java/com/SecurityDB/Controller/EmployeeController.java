@@ -46,10 +46,6 @@ public class EmployeeController {
         return employeeService.deleteById(id);
     }
 
-//    @PutMapping("/updateAll")
-//    public String updateAll(@RequestBody EmployeeEntity employeeEntity){
-//       return employeeService.updateAll(employeeEntity);
-//    }
     @PatchMapping("/updateName/{id}/{newName}")
     public String updateName(@PathVariable("id") Integer id, @PathVariable("newName") String name){
         return employeeService.updateName(id,name);
